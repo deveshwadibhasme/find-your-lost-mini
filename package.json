@@ -1,5 +1,22 @@
 {
-    "scripts": {
-      "start": "node server.js"
-    }
+  "name": "find-your-lost",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongodb": "^6.13.0",
+    "mongoose": "^8.9.6",
+    "twilio": "^5.4.3",
+    "nodemailer": "^6.9.4"
   }
+}
