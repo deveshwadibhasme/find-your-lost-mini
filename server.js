@@ -10,8 +10,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://data-deveshwadibhasme:120305@cluster0.cf18n.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true });
-
+const mondoDB = process.env.MONGO_URI || 'mongodb+srv://data-deveshwadibhasme:120305@cluster0.cf18n.mongodb.net/'
+mongoose.connect(mondoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 // Missing Person Schema
 const missingPersonSchema = new mongoose.Schema({
   name: String,
