@@ -20,7 +20,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/missing", formData);
+      await axios.post("find-your-lost-mini-production.up.railway.app/api/missing", formData);
       alert("Report submitted successfully");
       setFormData({
         name: "",
@@ -37,7 +37,7 @@ function App() {
   const handleSearch = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get("http://localhost:5000/api/missing", {
+      const response = await axios.get("find-your-lost-mini-production.up.railway.app/api/missing", {
         params: search,
       });
       setResults(response.data);
@@ -48,7 +48,7 @@ function App() {
 
   const markAsFound = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/missing/${id}/found`);
+      await axios.put(`find-your-lost-mini-production.up.railway.app/api/missing/${id}/found`);
       alert("Family has been notified");
       setResults(results.filter((person) => person._id !== id));
     } catch (error) {
