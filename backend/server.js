@@ -76,7 +76,7 @@ app.put('/api/missing/:id/found', async (req, res) => {
       subject: 'Family Member Found!',
       html: `<h2>${person.name} has been located!</h2>
              <p>Our system has received confirmation that ${person.name} 
-             has been found. Please contact authorities for reunion details.</p>`
+             has been found. Please contact authorities for reunion details or if you find the person so contact ${person.contact} to met them.</p>`
     });
 
     // In production: Add email/SMS notification here
